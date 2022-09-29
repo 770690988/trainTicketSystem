@@ -1,6 +1,7 @@
 package com.example.trainticketsystem.Controller;
 
 
+import com.example.trainticketsystem.Service.DriverService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,11 +17,12 @@ import java.security.NoSuchAlgorithmException;
 @RestController
 @RequestMapping
 public class DriverController {
+    @Autowired
+    private DriverService driverService;
 
     //登录
-    @RequestMapping(value = "/test",method = RequestMethod.POST)
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
     public String test(@RequestParam String name){
-        System.out.println(name + "is SB");
-        return "返回成功";
+        return null;
     }
 }
